@@ -1,0 +1,6 @@
+framework module Pods_NSSUITests {
+  umbrella header "Pods-NSSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

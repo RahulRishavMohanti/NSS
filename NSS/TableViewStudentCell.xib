@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableViewStudentCell" customModule="NSS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellbgstud" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-YQ-TuV">
+                        <rect key="frame" x="0.0" y="-1" width="320" height="44"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzD-FB-bpz">
+                        <rect key="frame" x="8" y="10" width="304" height="23.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration No." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3q-yW-3NO">
+                        <rect key="frame" x="189.5" y="11.5" width="122.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="vfb-YQ-TuV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="48T-tL-dDd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="wzD-FB-bpz" secondAttribute="trailing" id="7ee-zk-r9n"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="F3q-yW-3NO" secondAttribute="trailing" id="WVl-PY-28Y"/>
+                    <constraint firstItem="vfb-YQ-TuV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Wkc-eb-d8z"/>
+                    <constraint firstItem="wzD-FB-bpz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YzJ-pw-ONV"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="wzD-FB-bpz" secondAttribute="leading" id="cAm-mc-AZn"/>
+                    <constraint firstItem="vfb-YQ-TuV" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="dSq-Bp-2yD"/>
+                    <constraint firstItem="F3q-yW-3NO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lV9-wP-xBZ"/>
+                    <constraint firstItem="vfb-YQ-TuV" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="t5e-HE-xZa"/>
+                    <constraint firstItem="wzD-FB-bpz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tZZ-Q8-Jb0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="wzD-FB-bpz" id="PfI-o5-xya"/>
+                <outlet property="roll" destination="F3q-yW-3NO" id="o4M-BK-4mx"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cellbgstud" width="375" height="44"/>
+    </resources>
+</document>
