@@ -11,15 +11,20 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 var curr_user = String()
+var segflag = 0
 var event_name = String()
 var event_desc = String()
 var event_time = String()
 var event_date = String()
+var event_reg = String()
 var event_hour = String()
 var stud_name = String()
 var stud_roll = String()
 var stud_gender = String()
 var stud_contact = String()
+var event_stud = String()
+var event_studcoord = String()
+
 
 class ViewController: UIViewController, UITextFieldDelegate {
         var name = [String]()

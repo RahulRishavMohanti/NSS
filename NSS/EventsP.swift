@@ -22,7 +22,7 @@ class EventsP: UITableViewController {
         
 
         // Add a background view to the table view
-        let backgroundImage = UIImage(named: "back.png")
+        let backgroundImage = UIImage(named: "bg.png")
         let imageView = UIImageView(image: backgroundImage)
         //self.tableView.backgroundColor = UIColor.white
         self.tableView.backgroundView = imageView
@@ -32,11 +32,6 @@ class EventsP: UITableViewController {
         self.tableView.separatorColor = UIColor.clear;
         ref = Database.database().reference()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     override func viewDidAppear(_ animated: Bool) {
         events = []
@@ -54,6 +49,24 @@ class EventsP: UITableViewController {
 
                     print("hey2")
                     self.tableView.reloadData()
+                
+                
+            }
+        })
+        
+    }
+    func fetchEvents2(){
+        print("fetchEvents called");
+        refHandle = ref.child("events").observe(.childChanged, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject]
+            {   print(dictionary)
+                print("hey")
+                let event = Event()
+                event.setValuesForKeys(dictionary)
+                self.events.append(event)
+                
+                print("hey2")
+                self.tableView.reloadData()
                 
                 
             }
@@ -83,7 +96,7 @@ class EventsP: UITableViewController {
         
 
         // Configure the cell...
-        if(indexPath.row>0)
+        if(indexPath.row>0 && events.count>=1)
         {
             let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
             let temp = events[indexPath.row-1].name ?? " "
@@ -100,7 +113,7 @@ class EventsP: UITableViewController {
         }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        if(indexPath.row>0)
+        if(indexPath.row>0 && events.count>=1)
         {
             print(events[indexPath.row-1].time!)
             event_name = events[indexPath.row-1].name!
@@ -108,20 +121,30 @@ class EventsP: UITableViewController {
             event_desc = events[indexPath.row-1].desc!
             event_hour = events[indexPath.row-1].hours!
             event_date = events[indexPath.row-1].date!
-            
+            event_reg = events[indexPath.row-1].reg!
+            event_stud = events[indexPath.row-1].studs!
+            event_studcoord = events[indexPath.row-1].studcoord!
+            segflag = 1
             self.performSegue(withIdentifier: "EventInfoSeg", sender: nil)
         }
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if(editingStyle == UITableViewCellEditingStyle.delete && indexPath.row>0)
-        {
-           let temp = events[indexPath.row-1].name!
+        if(editingStyle == UITableViewCellEditingStyle.delete)
+        {   if(indexPath.row == 1)
+            {   ref.child("events").updateChildValues([events[0].name!:NSNull()])
+                events = []
+                self.tableView.reloadData()
+            }
+        else{
+            if(events.count>=1)
+            {
+            let temp = events[indexPath.row-1].name!
             var ref: DatabaseReference!
             ref = Database.database().reference()
-            ref.child("events").updateChildValues([temp:NSNull()]);
+            ref.child("events").updateChildValues([temp:NSNull()])
             events = []
-            fetchEvents()
+                fetchEvents()}}
         }
     }
 

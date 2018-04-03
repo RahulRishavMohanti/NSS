@@ -21,7 +21,7 @@ class EventsS: UITableViewController {
         super.viewWillAppear(animated)
         
         // Add a background view to the table view
-        let backgroundImage = UIImage(named: "back.png")
+        let backgroundImage = UIImage(named: "bg.png")
         let imageView = UIImageView(image: backgroundImage)
         //self.tableView.backgroundColor = UIColor.white
         self.tableView.backgroundView = imageView
@@ -106,7 +106,10 @@ class EventsS: UITableViewController {
             event_desc = events[indexPath.row-1].desc!
             event_hour = events[indexPath.row-1].hours!
             event_date = events[indexPath.row-1].date!
-            
+            event_reg = events[indexPath.row-1].reg!
+            event_stud = events[indexPath.row-1].studs!
+            event_studcoord = events[indexPath.row-1].studcoord!
+            segflag = 0
             self.performSegue(withIdentifier: "EventInfoSeg2", sender: nil)
         }
     }

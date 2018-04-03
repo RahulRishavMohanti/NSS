@@ -14,5 +14,8 @@ class Event: NSObject {
     var hours: String?
     var name: String?
     var time: String?
+    var reg: String?
+    var studs:String?
+    var studcoord:String?
 
 }

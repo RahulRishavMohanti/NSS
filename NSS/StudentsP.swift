@@ -27,7 +27,7 @@ class StudentsP: UITableViewController {
         super.viewWillAppear(animated)
         
         // Add a background view to the table view
-        let backgroundImage = UIImage(named: "back.png")
+        let backgroundImage = UIImage(named: "bg.png")
         let imageView = UIImageView(image: backgroundImage)
         //self.tableView.backgroundColor = UIColor.white
         self.tableView.backgroundView = imageView
@@ -108,6 +108,7 @@ class StudentsP: UITableViewController {
             stud_roll = students[indexPath.row-1].roll!
             stud_gender = students[indexPath.row-1].gender!
             stud_contact = students[indexPath.row-1].contact!
+            
             self.performSegue(withIdentifier: "StudentInfoSeg", sender: nil)
         }
     }

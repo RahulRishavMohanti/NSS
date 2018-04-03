@@ -10,6 +10,8 @@
 		2929A78E41E22393CAE0C015 /* Pods_NSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949D18E916CB1A8E069F282A /* Pods_NSS.framework */; };
 		86D2B0779B4ABDFB41471B68 /* Pods_NSSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5000BF5337AB3BE73F67125 /* Pods_NSSTests.framework */; };
 		B57257EACAAD9D7818012036 /* Pods_NSSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B667D122F3C315F0138E6C7E /* Pods_NSSUITests.framework */; };
+		C607E6FE205EEA0800D7A882 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607E6FD205EEA0800D7A882 /* File.swift */; };
+		C607E700205EEA1900D7A882 /* studcoord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607E6FF205EEA1800D7A882 /* studcoord.swift */; };
 		C64111442034A9DE00D8D6BC /* TableViewEventStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64111422034A9DE00D8D6BC /* TableViewEventStudentCell.swift */; };
 		C64111452034A9DE00D8D6BC /* TableViewEventStudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64111432034A9DE00D8D6BC /* TableViewEventStudentCell.xib */; };
 		C64111472034C78500D8D6BC /* updateStudentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64111462034C78500D8D6BC /* updateStudentDetails.swift */; };
@@ -59,6 +61,8 @@
 		949D18E916CB1A8E069F282A /* Pods_NSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5000BF5337AB3BE73F67125 /* Pods_NSSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B667D122F3C315F0138E6C7E /* Pods_NSSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NSSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C607E6FD205EEA0800D7A882 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C607E6FF205EEA1800D7A882 /* studcoord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studcoord.swift; sourceTree = "<group>"; };
 		C64111422034A9DE00D8D6BC /* TableViewEventStudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewEventStudentCell.swift; sourceTree = "<group>"; };
 		C64111432034A9DE00D8D6BC /* TableViewEventStudentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewEventStudentCell.xib; sourceTree = "<group>"; };
 		C64111462034C78500D8D6BC /* updateStudentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updateStudentDetails.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				C64111422034A9DE00D8D6BC /* TableViewEventStudentCell.swift */,
 				C64111432034A9DE00D8D6BC /* TableViewEventStudentCell.xib */,
 				C64111462034C78500D8D6BC /* updateStudentDetails.swift */,
+				C607E6FD205EEA0800D7A882 /* File.swift */,
+				C607E6FF205EEA1800D7A882 /* studcoord.swift */,
 			);
 			path = NSS;
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6822D062032364B00068848 /* EventInfo.swift in Sources */,
+				C607E700205EEA1900D7A882 /* studcoord.swift in Sources */,
 				C6822D0320322B8200068848 /* TableViewCell.swift in Sources */,
 				C64111442034A9DE00D8D6BC /* TableViewEventStudentCell.swift in Sources */,
 				C6822CFA20321C6A00068848 /* StudentsP.swift in Sources */,
@@ -525,6 +532,7 @@
 				C697AE8C20330E420047BFF2 /* addEvent.swift in Sources */,
 				C6822D0C2032463C00068848 /* Studentinfo.swift in Sources */,
 				C64111472034C78500D8D6BC /* updateStudentDetails.swift in Sources */,
+				C607E6FE205EEA0800D7A882 /* File.swift in Sources */,
 				C6FEB56A203197F700ABEFC1 /* ViewController.swift in Sources */,
 				C6822CFE2032237A00068848 /* Event.swift in Sources */,
 				C6822D09203244EF00068848 /* TableViewStudentCell.swift in Sources */,

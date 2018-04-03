@@ -109,6 +109,10 @@ class addEvent: UIViewController,UITextFieldDelegate {
         if(eHours.text != "")
         {
             ref.child("events").child(eName.text!).updateChildValues(["hours":eHours.text])
+            ref.child("events").child(eName.text!).updateChildValues(["reg":"0"])
+            ref.child("events").child(eName.text!).updateChildValues(["studs":"a"])
+            ref.child("events").child(eName.text!).updateChildValues(["studcoord":"A,B,C,D"])
+
         }
         print("done")
         
